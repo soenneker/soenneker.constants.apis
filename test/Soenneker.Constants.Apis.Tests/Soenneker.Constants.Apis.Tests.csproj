@@ -15,7 +15,7 @@
     </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\..\src\Soenneker.Constants.Apis.csproj" />
+        <ProjectReference Include="..\..\src\Soenneker.Constants.Apis\Soenneker.Constants.Apis.csproj" />
     </ItemGroup>
 
     <ItemGroup>
