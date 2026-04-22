@@ -1,11 +1,10 @@
-﻿using Soenneker.Tests.Unit;
-using Xunit;
+using Soenneker.Tests.Unit;
 
 namespace Soenneker.Constants.Apis.Tests;
 
 public sealed class ApiConstantsTests : UnitTest
 {
-    [Fact]
+    [Test]
     public void Default()
     {
 
