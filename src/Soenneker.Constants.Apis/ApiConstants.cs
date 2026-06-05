@@ -5,5 +5,8 @@
 /// </summary>
 public static class ApiConstants
 {
+    /// <summary>
+    /// The controller hit flag.
+    /// </summary>
     public const string ControllerHitFlag = nameof(ControllerHitFlag);
 }
