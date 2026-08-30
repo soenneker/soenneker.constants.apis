@@ -5,7 +5,7 @@
 
 # Soenneker.Constants.Apis
 
-Common constants typically used in .NET APIs.
+Provides the shared `HttpContext.Items` key used to mark requests that reached an MVC controller.
 
 ## Install
 
@@ -13,6 +13,16 @@ Common constants typically used in .NET APIs.
 dotnet add package Soenneker.Constants.Apis
 ```
 
-## What you get
+## Usage
 
-- `ApiConstants` — Common constants typically used in .NET APIs.
+```csharp
+using Soenneker.Constants.Apis;
+
+httpContext.Items[ApiConstants.ControllerHitFlag] = true;
+
+bool reachedController = httpContext.Items.ContainsKey(ApiConstants.ControllerHitFlag);
+```
+
+`ControllerHitFlag` has the literal value `"ControllerHitFlag"`. It is intended as an items-dictionary key; the associated value is conventionally `true`, but consumers generally only test whether the key is present.
+
+This allows independently packaged middleware and filters to communicate without duplicating a magic string. `HttpContext.Items` is scoped to one request, so the marker is not shared across requests or persisted.

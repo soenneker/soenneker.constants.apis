@@ -1,12 +1,12 @@
 ﻿namespace Soenneker.Constants.Apis;
 
 /// <summary>
-/// Common constants typically used in .NET APIs
+/// Provides keys shared by API middleware and filters.
 /// </summary>
 public static class ApiConstants
 {
     /// <summary>
-    /// The controller hit flag.
+    /// The <c>HttpContext.Items</c> key indicating that request execution reached a controller.
     /// </summary>
     public const string ControllerHitFlag = nameof(ControllerHitFlag);
 }
